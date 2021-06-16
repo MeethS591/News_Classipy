@@ -1,1 +1,2 @@
+You can download the dataset form below link and copy it to this directory.
 https://www.kaggle.com/uciml/news-aggregator-dataset
