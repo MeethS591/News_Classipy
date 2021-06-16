@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from newsapi import NewsApiClient
 
 category_list = ['business', 'entertainment', 'health', 'technology']
-newsapi = NewsApiClient(api_key='api_key')
+newsapi = NewsApiClient(api_key='api_key')#enter the api key you get from NewsAPI.org
 
 
 top_headlines = newsapi.get_top_headlines(
@@ -12,9 +12,9 @@ top_headlines = newsapi.get_top_headlines(
                                           country='in')
 
 docs_new = top_headlines
-loaded_vec = CountVectorizer(vocabulary=pickle.load(open("model_pickel/count_vector.pkl", "rb")))
-loaded_tfidf = pickle.load(open("model_pickel/tfidf.pkl","rb"))
-loaded_model = pickle.load(open("model_pickel/model.pkl","rb"))
+loaded_vec = CountVectorizer(vocabulary=pickle.load(open("model_pickle/count_vector.pkl", "rb")))
+loaded_tfidf = pickle.load(open("model_pickle/tfidf.pkl","rb"))
+loaded_model = pickle.load(open("model_pickle/model.pkl","rb"))
 #print(docs_new)
 for news in docs_new['articles']:
     news=[news["title"]]
