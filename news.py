@@ -1,6 +1,6 @@
 import pandas as pd
 news = pd.read_csv("news-aggregator-dataset/uci-news-aggregator.csv")
-#print(str(news))
+
 from sklearn.preprocessing import LabelEncoder
 
 encoder = LabelEncoder()
